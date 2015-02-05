@@ -16,11 +16,12 @@
 </head>
 <body>
 	<div class="container">
-  		<div class="jumbotron">
+		<div class="jumbotron">
   			<h1> This site is going to make me a millionaire! </h1>
   			<!-- fa fa-instagram is from font awesome referenced above -->
   			<a href="https://instagram.com/oauth/authorize/?client_id=7289372a4506430bbb00360596dfc507&redirect_uri=http://jsibo.github.io/feedme/&response_type=token"><button class="btn btn-primary btn-lg">Login with <i class="fa fa-instagram"></i> Instagram</a></button>
- 		</div>
+  	
+  	</div>
 	
 	
 	<div class="row" id="instafeed" style="padding-top: 50px;">
@@ -32,5 +33,12 @@
  	<!-- Latest compiled and minified JavaScript -->
  	<script src="https://maxdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.mn.js"></script>
  
+ 	<script type="text/javascript">
+ 		$(document).ready(function() {
+ 			console.log("Document is now ready!");
+ 			var imageHolder = $("#instafeed"); 						<!-- jquery goes and finds the id of instafeed -->
+ 		});
+ 		
+ 	</script>
 </body>
 </html>
