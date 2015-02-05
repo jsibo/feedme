@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-      <div class="jumbotron"
+      <div class="jumbotron">
           <h1>This site is going to make me a millionaire!</h1>
               <a href="https://instagram.com/oauth/authorize/?client_id=7289372a4506430bbb00360596dfc507&redirect_uri=http://jsibo.github.io/feedme/"><button class="btn btn-primary btn-lg">Login with <i class="fa fa-instagram"></i>  Instagram</button></a>
               <a href="https://instagram.com/accounts/logout/"> Logout </a>
@@ -43,7 +43,7 @@
               
               function createHtml (data) {
                 console.log("createHtml function fired");
-                data = data.data;
+                data = data.data; 
                 for (var i = 0; i < data.length; i++) {
                   console.log(data[i]);
                   var image = data[i].images.standard_resolution.url;
