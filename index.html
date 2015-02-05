@@ -44,7 +44,11 @@
  			
  			function createHtml (data) {
  				console.log("createHtml function fired");
- 				
+ 				for (var i = 0; i < data.length, i++) {
+ 					console.log(data[i]);
+ 					imageHolder.append(data[i]);
+ 				}
+
  				
  			}
  			
