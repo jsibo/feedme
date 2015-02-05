@@ -18,6 +18,9 @@
       <div class="jumbotron">
           <h1>This site is going to make me a millionaire!</h1>
               <a href="https://instagram.com/oauth/authorize/?client_id=7289372a4506430bbb00360596dfc507&redirect_uri=http://northdacoder.github.io/feedme/&response_type=token"><button class="btn btn-primary btn-lg">Login with <i class="fa fa-instagram"></i>  Instagram</button></a>
+              <a href="https://instagram.com/accounts/logout/"> Logout </a>
+      
+        
       </div>
       
       <div class="row" id="instafeed" style="padding-top: 50px;">
@@ -47,7 +50,12 @@
                   console.log(data[i]);
                   var image = data[i].images.standard_resolution.url;
                   console.log(image);
-                  imageHolder.append('<img src="' + image + '" class="img-circle" />');
+                  var htmlString =  '<br>' +
+                                    '<div class="well">' + 
+                                      '<h1>' + data[i].user.username + '</h1>' +  
+                                      '<img src="' + image + '" class="img-thumbnail" />' +
+                                    '</div>';
+                  imageHolder.append(htmlString);
                   imageHolder.append(data[i]);
                 }
                 
